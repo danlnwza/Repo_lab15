@@ -19,3 +19,24 @@ int main(){
 }
 
 //Do not modify source code above this line
+
+void shuffle(int &a,int &b,int &c,int &d) { //ref. argu
+	//กําหนด arr
+	int arr[4] = {a,b,c,d};
+
+for(int i = 3; i > 0 ; i--){
+	//สุ่มตัวแปร
+	int j = rand() % (i+1);
+	//สลับค่าไปเรื่อยๆ
+	int temp = arr[i];
+	arr[i] = arr[j];
+	arr[j] = temp;
+}
+	//สลับแล้วเอาใส่ที่เดิม
+	a = arr[0];
+	b = arr[1];
+	c = arr[2];
+	d = arr[3]; 
+}
+
+
