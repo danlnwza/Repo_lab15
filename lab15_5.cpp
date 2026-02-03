@@ -20,3 +20,24 @@ int main(){
 
 //Do not modify the code above this line
 //Write definition of shuffle() using pointer after this line. 
+
+void shuffle(int *a,int *b,int *c,int *d){ //ptr. argu
+	//กําหนด arr
+	int arr[4] = {*a,*b,*c,*d};
+	for(int i = 3;i > 0;i--){
+		//สุ่มค่าตัวแปร
+		int j =rand() % (i+1);
+		//สลับค่าไปเรื่อยๆ
+		int temp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = temp;
+	}
+	//เอาตัวแปรกลับใส่ ผ่าน ptr
+	*a = arr[0];
+	*b = arr[1];
+	*c = arr[2];
+	*d = arr[3];
+}
+
+
+
